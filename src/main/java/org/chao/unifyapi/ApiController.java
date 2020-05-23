@@ -17,4 +17,9 @@ public class ApiController {
     public int getMessage(@Validated(R.class) int a) {
         return 0;
     }
+
+    @GetMapping("/excep")
+    public int testException(){
+        throw new RuntimeException("测试异常");
+    }
 }
